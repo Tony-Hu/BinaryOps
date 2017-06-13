@@ -68,4 +68,13 @@ public class LintCode411 {
         }
         return reverse;
     }
+
+    //Method 3 - 感觉智商受到了碾压
+    public ArrayList<Integer> grayCode3(int n) {
+        ArrayList<Integer> result = new ArrayList<>();
+        for (int i = 0; i < (1 << n);i++){
+            result.add(i ^ (i >> 1));
+        }
+        return result;
+    }
 }
